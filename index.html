@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Information Management</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <img src="img/logo.png" alt="Rocksure International Logo" id="logo">
+        <h1>Rocksure International</h1>
+        <h2>Operator Information Management</h2>
+    </header>
+    <main>
+        <div class="container">
+            <h2>Add/Edit Operator</h2>
+            <form id="operator-form" enctype="multipart/form-data">
+                <input type="hidden" id="operator-id" name="id">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="shift">Shift:</label>
+                    <select id="shift" name="shift" required>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="equipment-type">Equipment Type:</label>
+                    <select id="equipment-type" name="equipment_type" required>
+                        <option value="excavator">Excavator</option>
+                        <option value="loader">Loader</option>
+                        <option value="water_cart">Water Cart</option>
+                        <option value="dump_truck">Dump Truck</option>
+                        <option value="grader">Grader</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="license-class">License Class:</label>
+                    <input type="text" id="license-class" name="license_class" required>
+                </div>
+                <div class="form-group">
+                    <label for="license-permit-issue-date">License Permit Issue Date:</label>
+                    <input type="date" id="license-permit-issue-date" name="license_permit_issue_date" required>
+                </div>
+                <div class="form-group">
+                    <label for="license-permit-expiry-date">License Permit Expiry Date:</label>
+                    <input type="date" id="license-permit-expiry-date" name="license_permit_expiry_date" required>
+                </div>
+                <div class="form-group">
+                    <label for="mincom-certified">Mincom Certified:</label>
+                    <input type="checkbox" id="mincom-certified" name="mincom_certified">
+                </div>
+                <div class="form-group">
+                    <label for="mincom-registered">Mincom Registered:</label>
+                    <input type="checkbox" id="mincom-registered" name="mincom_registered">
+                </div>
+                <div class="form-group">
+                    <label for="mincom-issue-date">Mincom Issue Date:</label>
+                    <input type="date" id="mincom-issue-date" name="mincom_issue_date">
+                </div>
+                <div class="form-group">
+                    <label for="picture">Picture:</label>
+                    <input type="file" id="picture" name="picture" accept="image/*">
+                </div>
+                <button type="submit">Save Operator</button>
+            </form>
+        </div>
+        <div class="container">
+            <h2>Operator List</h2>
+            <table id="operator-table">
+                <thead>
+                    <tr>
+                        <th>Picture</th>
+                        <th>Name</th>
+                        <th>Shift</th>
+                        <th>Equipment Type</th>
+                        <th>License Class</th>
+                        <th>License Issue Date</th>
+                        <th>License Expiry Date</th>
+                        <th>Mincom Certified</th>
+                        <th>Mincom Registered</th>
+                        <th>Mincom Issue Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Operator data will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
