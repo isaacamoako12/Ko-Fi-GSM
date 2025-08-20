@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rocksure International - Operator Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Operator Management</h1>
+        <div class="form-container">
+            <h2>Add New Operator</h2>
+            <form id="add-operator-form" enctype="multipart/form-data">
+                <input type="hidden" name="company" value="Rocksure International">
+
+                <label for="operator_name">Operator Name:</label>
+                <input type="text" id="operator_name" name="operator_name" required>
+
+                <label for="operator_picture">Operator Picture:</label>
+                <input type="file" id="operator_picture" name="operator_picture" required>
+
+                <label for="equipment_type">Equipment Type:</label>
+                <select id="equipment_type" name="equipment_type" required>
+                    <option value="excavator">Excavator</option>
+                    <option value="loader">Loader</option>
+                    <option value="water bowser">Water Bowser</option>
+                    <option value="dump truck">Dump Truck</option>
+                    <option value="grader">Grader</option>
+                    <option value="loader">Loader</option>
+                </select>
+
+                <label for="license_classes">License Classes:</label>
+                <input type="text" id="license_classes" name="license_classes" required>
+
+                <label for="license_permit_issue_date">License Permit Issue Date:</label>
+                <input type="date" id="license_permit_issue_date" name="license_permit_issue_date" required>
+
+                <label for="license_permit_expiry_date">License Permit Expiry Date:</label>
+                <input type="date" id="license_permit_expiry_date" name="license_permit_expiry_date" required>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="mincom_certified" name="mincom_certified">
+                    <label for="mincom_certified">Mincom Certified</label>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="mincom_registered" name="mincom_registered">
+                    <label for="mincom_registered">Mincom Registered</label>
+                </div>
+
+                <label for="mincom_issue_date">Mincom Issue Date:</label>
+                <input type="date" id="mincom_issue_date" name="mincom_issue_date" required>
+
+                <button type="submit">Add Operator</button>
+            </form>
+        </div>
+
+        <div class="operators-list-container">
+            <h2>Current Operators</h2>
+            <div id="operators-list"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
