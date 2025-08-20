@@ -1,6 +1,9 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-image: url('images/background.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: #333;
     line-height: 1.6;
 }
